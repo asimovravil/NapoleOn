@@ -90,7 +90,9 @@ class TrainingViewController: UIViewController {
     }
     
     @objc private func skipButtonTapped() {
-        print("skip")
+        let levelsVC = LevelsViewController()
+        levelsVC.navigationItem.hidesBackButton = true
+        self.navigationController?.pushViewController(levelsVC, animated: true)
     }
     
     private func valueConstraints() {
@@ -152,7 +154,9 @@ class TrainingViewController: UIViewController {
                 buttonTraining.setTitle("Start", for: .normal)
             }
         } else {
-            print("good")
+            let levelsVC = LevelsViewController()
+            levelsVC.navigationItem.hidesBackButton = true
+            self.navigationController?.pushViewController(levelsVC, animated: true)
         }
     }
 }
