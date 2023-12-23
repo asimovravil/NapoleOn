@@ -25,6 +25,8 @@
 		F1813D812B36BA5D00BD5ACE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1813D802B36BA5D00BD5ACE /* DetailViewController.swift */; };
 		F1813D832B36BA6300BD5ACE /* DetailInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1813D822B36BA6300BD5ACE /* DetailInfo.swift */; };
 		F1813D852B36C13D00BD5ACE /* LoaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1813D842B36C13D00BD5ACE /* LoaderViewController.swift */; };
+		F1813D872B36C68E00BD5ACE /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1813D862B36C68E00BD5ACE /* QuizViewController.swift */; };
+		F1813D8B2B36CAB600BD5ACE /* QuizNapoleon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1813D8A2B36CAB600BD5ACE /* QuizNapoleon.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		F1813D802B36BA5D00BD5ACE /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		F1813D822B36BA6300BD5ACE /* DetailInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailInfo.swift; sourceTree = "<group>"; };
 		F1813D842B36C13D00BD5ACE /* LoaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderViewController.swift; sourceTree = "<group>"; };
+		F1813D862B36C68E00BD5ACE /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
+		F1813D8A2B36CAB600BD5ACE /* QuizNapoleon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizNapoleon.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +93,8 @@
 				F1813D7E2B36B50800BD5ACE /* LevelsCell.swift */,
 				F1813D802B36BA5D00BD5ACE /* DetailViewController.swift */,
 				F1813D822B36BA6300BD5ACE /* DetailInfo.swift */,
+				F1813D862B36C68E00BD5ACE /* QuizViewController.swift */,
+				F1813D8A2B36CAB600BD5ACE /* QuizNapoleon.swift */,
 				F1813D5E2B36A3F800BD5ACE /* Assets.xcassets */,
 				F1813D602B36A3F800BD5ACE /* LaunchScreen.storyboard */,
 				F1813D632B36A3F800BD5ACE /* Info.plist */,
@@ -193,8 +199,10 @@
 				F1813D5A2B36A3F700BD5ACE /* TrainingViewController.swift in Sources */,
 				F1813D562B36A3F700BD5ACE /* AppDelegate.swift in Sources */,
 				F1813D852B36C13D00BD5ACE /* LoaderViewController.swift in Sources */,
+				F1813D8B2B36CAB600BD5ACE /* QuizNapoleon.swift in Sources */,
 				F1813D582B36A3F700BD5ACE /* SceneDelegate.swift in Sources */,
 				F1813D812B36BA5D00BD5ACE /* DetailViewController.swift in Sources */,
+				F1813D872B36C68E00BD5ACE /* QuizViewController.swift in Sources */,
 				F1813D7D2B36B4B800BD5ACE /* LevelsViewController.swift in Sources */,
 				F1813D7F2B36B50800BD5ACE /* LevelsCell.swift in Sources */,
 			);
