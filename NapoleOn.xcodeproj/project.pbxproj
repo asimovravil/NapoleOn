@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F1442D672B36D9C600266803 /* Card1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1442D662B36D9C600266803 /* Card1ViewController.swift */; };
 		F1813D562B36A3F700BD5ACE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1813D552B36A3F700BD5ACE /* AppDelegate.swift */; };
 		F1813D582B36A3F700BD5ACE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1813D572B36A3F700BD5ACE /* SceneDelegate.swift */; };
 		F1813D5A2B36A3F700BD5ACE /* TrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1813D592B36A3F700BD5ACE /* TrainingViewController.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F1442D662B36D9C600266803 /* Card1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card1ViewController.swift; sourceTree = "<group>"; };
 		F1813D522B36A3F700BD5ACE /* NapoleOn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NapoleOn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1813D552B36A3F700BD5ACE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1813D572B36A3F700BD5ACE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				F1813D822B36BA6300BD5ACE /* DetailInfo.swift */,
 				F1813D862B36C68E00BD5ACE /* QuizViewController.swift */,
 				F1813D8A2B36CAB600BD5ACE /* QuizNapoleon.swift */,
+				F1442D662B36D9C600266803 /* Card1ViewController.swift */,
 				F1813D5E2B36A3F800BD5ACE /* Assets.xcassets */,
 				F1813D602B36A3F800BD5ACE /* LaunchScreen.storyboard */,
 				F1813D632B36A3F800BD5ACE /* Info.plist */,
@@ -211,6 +214,7 @@
 				F1813D8F2B36D0AE00BD5ACE /* CreateCell.swift in Sources */,
 				F1813D812B36BA5D00BD5ACE /* DetailViewController.swift in Sources */,
 				F1813D872B36C68E00BD5ACE /* QuizViewController.swift in Sources */,
+				F1442D672B36D9C600266803 /* Card1ViewController.swift in Sources */,
 				F1813D7D2B36B4B800BD5ACE /* LevelsViewController.swift in Sources */,
 				F1813D7F2B36B50800BD5ACE /* LevelsCell.swift in Sources */,
 			);
