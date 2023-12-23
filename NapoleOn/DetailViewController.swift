@@ -13,6 +13,7 @@ class DetailInfoViewController: UIViewController {
     let titleDetail = UILabel()
     let titleDesc = UILabel()
     let scrollView = UIScrollView()
+    let buttonDetail = UIButton(type: .system)
     
     var info: Info?
     
@@ -28,6 +29,12 @@ class DetailInfoViewController: UIViewController {
             titleDetail.text = info.title
             titleDesc.text = info.description
         }
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        buttonDetail.layer.cornerRadius = 10
     }
     
     private func valueUI() {
@@ -53,11 +60,23 @@ class DetailInfoViewController: UIViewController {
         titleDesc.numberOfLines = 0
         titleDesc.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(titleDesc)
+        
+        buttonDetail.setTitle("Pass the test", for: .normal)
+        buttonDetail.setTitleColor(.white, for: .normal)
+        buttonDetail.titleLabel?.font = UIFont(name: "Rubik-Medium", size: 18)
+        buttonDetail.contentHorizontalAlignment = .center
+        buttonDetail.backgroundColor = UIColor(named: "redCustom")
+        buttonDetail.titleLabel?.numberOfLines = 0
+        buttonDetail.translatesAutoresizingMaskIntoConstraints = false
+        buttonDetail.addTarget(self, action: #selector(buttonDetailOption), for: .touchUpInside)
+        view.addSubview(buttonDetail)
     }
     
     private func valueConstraints() {
         scrollView.addSubview(imageDetail)
+        scrollView.addSubview(titleDetail)
         scrollView.addSubview(titleDesc)
+        scrollView.addSubview(buttonDetail)
 
         NSLayoutConstraint.activate([
             scrollView.topAnchor.constraint(equalTo: view.topAnchor),
@@ -73,12 +92,25 @@ class DetailInfoViewController: UIViewController {
             titleDetail.topAnchor.constraint(equalTo: imageDetail.bottomAnchor, constant: 24),
             titleDetail.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 16),
             titleDetail.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -16),
-
+            
             titleDesc.topAnchor.constraint(equalTo: titleDetail.bottomAnchor, constant: 16),
             titleDesc.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 16),
             titleDesc.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -16),
             titleDesc.widthAnchor.constraint(equalTo: scrollView.widthAnchor, constant: -32),
-            titleDesc.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor)
+
+            buttonDetail.topAnchor.constraint(equalTo: titleDesc.bottomAnchor, constant: 24),
+            buttonDetail.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 16),
+            buttonDetail.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -16),
+            buttonDetail.heightAnchor.constraint(equalToConstant: 53)
         ])
+        let bottomConstraint = buttonDetail.bottomAnchor.constraint(equalTo: scrollView.contentLayoutGuide.bottomAnchor, constant: -20)
+        bottomConstraint.priority = .required
+        bottomConstraint.isActive = true
+    }
+
+
+    
+    @objc private func buttonDetailOption() {
+        print("quiz")
     }
 }
