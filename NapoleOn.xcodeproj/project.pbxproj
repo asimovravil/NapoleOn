@@ -22,6 +22,8 @@
 		F1813D792B36A56700BD5ACE /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F1813D712B36A56700BD5ACE /* Rubik-Regular.ttf */; };
 		F1813D7D2B36B4B800BD5ACE /* LevelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1813D7C2B36B4B800BD5ACE /* LevelsViewController.swift */; };
 		F1813D7F2B36B50800BD5ACE /* LevelsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1813D7E2B36B50800BD5ACE /* LevelsCell.swift */; };
+		F1813D812B36BA5D00BD5ACE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1813D802B36BA5D00BD5ACE /* DetailViewController.swift */; };
+		F1813D832B36BA6300BD5ACE /* DetailInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1813D822B36BA6300BD5ACE /* DetailInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		F1813D712B36A56700BD5ACE /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
 		F1813D7C2B36B4B800BD5ACE /* LevelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelsViewController.swift; sourceTree = "<group>"; };
 		F1813D7E2B36B50800BD5ACE /* LevelsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelsCell.swift; sourceTree = "<group>"; };
+		F1813D802B36BA5D00BD5ACE /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		F1813D822B36BA6300BD5ACE /* DetailInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,8 @@
 				F1813D592B36A3F700BD5ACE /* TrainingViewController.swift */,
 				F1813D7C2B36B4B800BD5ACE /* LevelsViewController.swift */,
 				F1813D7E2B36B50800BD5ACE /* LevelsCell.swift */,
+				F1813D802B36BA5D00BD5ACE /* DetailViewController.swift */,
+				F1813D822B36BA6300BD5ACE /* DetailInfo.swift */,
 				F1813D5E2B36A3F800BD5ACE /* Assets.xcassets */,
 				F1813D602B36A3F800BD5ACE /* LaunchScreen.storyboard */,
 				F1813D632B36A3F800BD5ACE /* Info.plist */,
@@ -180,9 +186,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1813D832B36BA6300BD5ACE /* DetailInfo.swift in Sources */,
 				F1813D5A2B36A3F700BD5ACE /* TrainingViewController.swift in Sources */,
 				F1813D562B36A3F700BD5ACE /* AppDelegate.swift in Sources */,
 				F1813D582B36A3F700BD5ACE /* SceneDelegate.swift in Sources */,
+				F1813D812B36BA5D00BD5ACE /* DetailViewController.swift in Sources */,
 				F1813D7D2B36B4B800BD5ACE /* LevelsViewController.swift in Sources */,
 				F1813D7F2B36B50800BD5ACE /* LevelsCell.swift in Sources */,
 			);

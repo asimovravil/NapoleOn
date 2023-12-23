@@ -70,6 +70,11 @@ extension LevelsViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let detailVC = DetailInfoViewController()
+        let selectedInfo = exampleInfo[indexPath.row]
+        detailVC.info = selectedInfo
+        navigationController?.pushViewController(detailVC, animated: true)
     }
     
     func configureCell(_ cell: LevelsCell, forRowAt indexPath: IndexPath) {
