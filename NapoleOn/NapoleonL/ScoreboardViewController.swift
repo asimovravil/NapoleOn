@@ -42,7 +42,7 @@ class ScoreboardViewController: UIViewController {
         labelWin.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(labelWin)
         
-        labelTeam.text = "Team 1"
+        labelTeam.text = "Leaderboard"
         labelTeam.textColor = .white
         labelTeam.font = UIFont(name: "Rubik-Bold", size: 40)
         labelTeam.textAlignment = .center
