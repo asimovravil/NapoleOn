@@ -115,7 +115,10 @@ class LoseQuizViewController: UIViewController {
             quizVC.resetForNextTeam()
             navigationController?.popToViewController(quizVC, animated: true)
         } else {
-            print("круг прошел")
+            let rouletteVC = RouletteViewController()
+            rouletteVC.teamNames = quizVC.teamNames
+            rouletteVC.correctAnswersCount = quizVC.correctAnswersCount
+            self.navigationController?.pushViewController(rouletteVC, animated: true)
         }
     }
 }

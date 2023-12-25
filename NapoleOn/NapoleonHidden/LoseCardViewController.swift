@@ -8,6 +8,10 @@
 import UIKit
 
 class LoseCardViewController: UIViewController {
+    
+    var correctAnswersCount = 0
+    var teamNames: [String] = []
+    var currentTeamIndex: Int = 0
 
     var teamName: String = ""
     var score: Int = 0
@@ -93,7 +97,17 @@ class LoseCardViewController: UIViewController {
     }
     
     @objc private func buttonTrainingOption() {
-
+        if currentTeamIndex < teamNames.count - 1 {
+            currentTeamIndex += 1
+            guard let cardVC = navigationController?.viewControllers.first(where: { $0 is Card1ViewController }) as? Card1ViewController else { return }
+            cardVC.currentTeamIndex = currentTeamIndex
+            navigationController?.popToViewController(cardVC, animated: true)
+        } else {
+            print("круг прошел")
+            let rouletteVC = RouletteViewController()
+            rouletteVC.teamNames = teamNames
+            navigationController?.pushViewController(rouletteVC, animated: true)
+        }
     }
 }
 

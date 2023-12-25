@@ -9,6 +9,9 @@ import UIKit
 
 class RouletteViewController: UIViewController {
     
+    var teamNames: [String] = []
+    
+    var correctAnswersCount = 0
     var selectedCardNumber: Int?
     
     let backgroundRoulette = UIImageView()
@@ -186,12 +189,18 @@ class RouletteViewController: UIViewController {
         switch selectedCardNumber {
         case 1:
             let card1VC = Card1ViewController()
+            card1VC.teamNames = self.teamNames 
+            card1VC.correctAnswersCount = self.correctAnswersCount
             self.navigationController?.pushViewController(card1VC, animated: true)
         case 2:
             let card2VC = Card1ViewController()
+            card2VC.teamNames = self.teamNames
+            card2VC.correctAnswersCount = self.correctAnswersCount
             self.navigationController?.pushViewController(card2VC, animated: true)
         case 3:
             let card3VC = Card1ViewController()
+            card3VC.teamNames = self.teamNames
+            card3VC.correctAnswersCount = self.correctAnswersCount
             self.navigationController?.pushViewController(card3VC, animated: true)
         default:
             print("Invalid card number")

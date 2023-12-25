@@ -9,6 +9,10 @@ import UIKit
 
 class Card1ViewController: UIViewController {
     
+    var correctAnswersCount = 0
+    var teamNames: [String] = []
+    var currentTeamIndex: Int = 0
+    
     var isSwordPressed = false
     var isBallsPressed = false
     var isPipePressed = false
@@ -39,6 +43,38 @@ class Card1ViewController: UIViewController {
         view.backgroundColor = UIColor(named: "backgroundCustom")
         startTimer()
         createImageStackView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        resetUI()
+    }
+    
+    private func resetUI() {
+        isSwordPressed = false
+        isBallsPressed = false
+        isPipePressed = false
+        isStonePressed = false
+
+        swordSuccess.isHidden = true
+        ballsSuccess.isHidden = true
+        pipeSuccess.isHidden = true
+        stoneSuccess.isHidden = true
+
+        unhideAllImages()
+        
+        timer?.invalidate()
+        timeRemaining = 600
+        updateTimerLabel()
+        startTimer()
+    }
+
+    private func unhideAllImages() {
+        for subview in view.subviews {
+            if let stackView = subview as? UIStackView {
+                stackView.arrangedSubviews.forEach { $0.isHidden = false }
+            }
+        }
     }
     
     private func valueUI() {
@@ -195,6 +231,9 @@ class Card1ViewController: UIViewController {
     
     private func navigateToLoseCardViewController() {
         let loseVC = LoseCardViewController()
+        loseVC.teamNames = self.teamNames
+        loseVC.correctAnswersCount = self.correctAnswersCount
+        loseVC.currentTeamIndex = self.currentTeamIndex
         loseVC.navigationItem.hidesBackButton = true
         navigationController?.pushViewController(loseVC, animated: true)
     }
@@ -342,6 +381,9 @@ class Card1ViewController: UIViewController {
     private func navigateToWinCardViewController() {
         let winVC = WinCardViewController()
         winVC.timer = timeRemaining
+        winVC.teamNames = self.teamNames
+        winVC.correctAnswersCount = self.correctAnswersCount
+        winVC.currentTeamIndex = self.currentTeamIndex
         navigationController?.pushViewController(winVC, animated: true)
     }
 }
