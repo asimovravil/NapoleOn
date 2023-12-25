@@ -11,6 +11,8 @@
 		F1442D6F2B39441000266803 /* WinQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1442D6E2B39441000266803 /* WinQuizViewController.swift */; };
 		F1442D712B39441B00266803 /* LoseQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1442D702B39441B00266803 /* LoseQuizViewController.swift */; };
 		F1442D732B3949F200266803 /* RouletteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1442D722B3949F200266803 /* RouletteViewController.swift */; };
+		F1442D752B39944000266803 /* WinCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1442D742B39944000266803 /* WinCardViewController.swift */; };
+		F1442D772B39961B00266803 /* LoseCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1442D762B39961B00266803 /* LoseCardViewController.swift */; };
 		F1813D562B36A3F700BD5ACE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1813D552B36A3F700BD5ACE /* AppDelegate.swift */; };
 		F1813D582B36A3F700BD5ACE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1813D572B36A3F700BD5ACE /* SceneDelegate.swift */; };
 		F1813D5A2B36A3F700BD5ACE /* TrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1813D592B36A3F700BD5ACE /* TrainingViewController.swift */; };
@@ -40,6 +42,8 @@
 		F1442D6E2B39441000266803 /* WinQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinQuizViewController.swift; sourceTree = "<group>"; };
 		F1442D702B39441B00266803 /* LoseQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoseQuizViewController.swift; sourceTree = "<group>"; };
 		F1442D722B3949F200266803 /* RouletteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouletteViewController.swift; sourceTree = "<group>"; };
+		F1442D742B39944000266803 /* WinCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinCardViewController.swift; sourceTree = "<group>"; };
+		F1442D762B39961B00266803 /* LoseCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoseCardViewController.swift; sourceTree = "<group>"; };
 		F1813D522B36A3F700BD5ACE /* NapoleOn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NapoleOn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1813D552B36A3F700BD5ACE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1813D572B36A3F700BD5ACE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +123,8 @@
 			isa = PBXGroup;
 			children = (
 				F1442D662B36D9C600266803 /* Card1ViewController.swift */,
+				F1442D742B39944000266803 /* WinCardViewController.swift */,
+				F1442D762B39961B00266803 /* LoseCardViewController.swift */,
 			);
 			path = NapoleonHidden;
 			sourceTree = "<group>";
@@ -267,10 +273,12 @@
 				F1813D562B36A3F700BD5ACE /* AppDelegate.swift in Sources */,
 				F1813D852B36C13D00BD5ACE /* LoaderViewController.swift in Sources */,
 				F1813D8B2B36CAB600BD5ACE /* QuizNapoleon.swift in Sources */,
+				F1442D752B39944000266803 /* WinCardViewController.swift in Sources */,
 				F1813D582B36A3F700BD5ACE /* SceneDelegate.swift in Sources */,
 				F1813D8F2B36D0AE00BD5ACE /* CreateCell.swift in Sources */,
 				F1442D6F2B39441000266803 /* WinQuizViewController.swift in Sources */,
 				F1813D812B36BA5D00BD5ACE /* DetailViewController.swift in Sources */,
+				F1442D772B39961B00266803 /* LoseCardViewController.swift in Sources */,
 				F1442D732B3949F200266803 /* RouletteViewController.swift in Sources */,
 				F1813D872B36C68E00BD5ACE /* QuizViewController.swift in Sources */,
 				F1442D672B36D9C600266803 /* Card1ViewController.swift in Sources */,
