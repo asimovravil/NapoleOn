@@ -20,6 +20,11 @@ class Card1ViewController: UIViewController {
     let buttonPipe = UIButton()
     let buttonStone = UIButton()
     
+    let swordSuccess = UIImageView()
+    let ballsSuccess = UIImageView()
+    let pipeSuccess = UIImageView()
+    let stoneSuccess = UIImageView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -40,19 +45,51 @@ class Card1ViewController: UIViewController {
         
         buttonSword.setImage(UIImage(named: "sword"), for: .normal)
         buttonSword.translatesAutoresizingMaskIntoConstraints = false
+        buttonSword.addTarget(self, action: #selector(buttonSwordOption), for: .touchUpInside)
         view.addSubview(buttonSword)
         
         buttonBalls.setImage(UIImage(named: "balls"), for: .normal)
         buttonBalls.translatesAutoresizingMaskIntoConstraints = false
+        buttonBalls.addTarget(self, action: #selector(buttonBallsOption), for: .touchUpInside)
         view.addSubview(buttonBalls)
         
         buttonPipe.setImage(UIImage(named: "pipe"), for: .normal)
         buttonPipe.translatesAutoresizingMaskIntoConstraints = false
+        buttonPipe.addTarget(self, action: #selector(buttonPipeOption), for: .touchUpInside)
         view.addSubview(buttonPipe)
         
         buttonStone.setImage(UIImage(named: "stone"), for: .normal)
         buttonStone.translatesAutoresizingMaskIntoConstraints = false
+        buttonStone.addTarget(self, action: #selector(buttonStoneOption), for: .touchUpInside)
         view.addSubview(buttonStone)
+        
+        swordSuccess.image = UIImage(named: "swordSuccess")
+        swordSuccess.layer.masksToBounds = true
+        swordSuccess.contentMode = .scaleAspectFill
+        swordSuccess.translatesAutoresizingMaskIntoConstraints = false
+        swordSuccess.isHidden = true
+        view.addSubview(swordSuccess)
+        
+        pipeSuccess.image = UIImage(named: "pipeSuccess")
+        pipeSuccess.layer.masksToBounds = true
+        pipeSuccess.contentMode = .scaleAspectFill
+        pipeSuccess.translatesAutoresizingMaskIntoConstraints = false
+        pipeSuccess.isHidden = true
+        view.addSubview(pipeSuccess)
+        
+        ballsSuccess.image = UIImage(named: "ballsSuccess")
+        ballsSuccess.layer.masksToBounds = true
+        ballsSuccess.contentMode = .scaleAspectFill
+        ballsSuccess.translatesAutoresizingMaskIntoConstraints = false
+        ballsSuccess.isHidden = true
+        view.addSubview(ballsSuccess)
+        
+        stoneSuccess.image = UIImage(named: "stoneSuccess")
+        stoneSuccess.layer.masksToBounds = true
+        stoneSuccess.contentMode = .scaleAspectFill
+        stoneSuccess.translatesAutoresizingMaskIntoConstraints = false
+        stoneSuccess.isHidden = true
+        view.addSubview(stoneSuccess)
     }
     
     private func valueConstraints() {
@@ -71,6 +108,18 @@ class Card1ViewController: UIViewController {
             
             buttonStone.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
             buttonStone.bottomAnchor.constraint(equalTo: buttonSword.topAnchor, constant: -62),
+            
+            swordSuccess.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            swordSuccess.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            
+            ballsSuccess.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            ballsSuccess.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            
+            pipeSuccess.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            pipeSuccess.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            
+            stoneSuccess.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            stoneSuccess.centerYAnchor.constraint(equalTo: view.centerYAnchor),
         ])
         
         if UIScreen.main.bounds.size.height >= 812 {
@@ -175,5 +224,89 @@ class Card1ViewController: UIViewController {
     
     @objc private func settingsButton() {
         print("settings")
+    }
+    
+    @objc private func buttonSwordOption() {
+        swordSuccess.isHidden = false
+        
+        Timer.scheduledTimer(withTimeInterval: 2.0, repeats: false) { [weak self] timer in
+            self?.swordSuccess.isHidden = true
+            self?.hideImage1()
+        }
+    }
+    
+    @objc private func buttonBallsOption() {
+        ballsSuccess.isHidden = false
+        
+        Timer.scheduledTimer(withTimeInterval: 2.0, repeats: false) { [weak self] timer in
+            self?.ballsSuccess.isHidden = true
+            self?.hideImage2()
+        }
+    }
+    
+    @objc private func buttonPipeOption() {
+        pipeSuccess.isHidden = false
+        
+        Timer.scheduledTimer(withTimeInterval: 2.0, repeats: false) { [weak self] timer in
+            self?.pipeSuccess.isHidden = true
+            self?.hideImage3()
+        }
+    }
+    
+    @objc private func buttonStoneOption() {
+        stoneSuccess.isHidden = false
+        
+        Timer.scheduledTimer(withTimeInterval: 2.0, repeats: false) { [weak self] timer in
+            self?.stoneSuccess.isHidden = true
+            self?.hideImage4()
+        }
+    }
+    
+    private func hideImage1() {
+        for subview in view.subviews {
+            if subview is UIStackView {
+                let stackView = subview as! UIStackView
+                if stackView.arrangedSubviews.count >= 1 {
+                    let image2 = stackView.arrangedSubviews[0]
+                    image2.isHidden = true
+                }
+            }
+        }
+    }
+    
+    private func hideImage2() {
+        for subview in view.subviews {
+            if subview is UIStackView {
+                let stackView = subview as! UIStackView
+                if stackView.arrangedSubviews.count >= 2 {
+                    let image2 = stackView.arrangedSubviews[1]
+                    image2.isHidden = true
+                }
+            }
+        }
+    }
+
+    private func hideImage3() {
+        for subview in view.subviews {
+            if subview is UIStackView {
+                let stackView = subview as! UIStackView
+                if stackView.arrangedSubviews.count >= 3 {
+                    let image3 = stackView.arrangedSubviews[2]
+                    image3.isHidden = true
+                }
+            }
+        }
+    }
+    
+    private func hideImage4() {
+        for subview in view.subviews {
+            if subview is UIStackView {
+                let stackView = subview as! UIStackView
+                if stackView.arrangedSubviews.count >= 4 {
+                    let image3 = stackView.arrangedSubviews[3]
+                    image3.isHidden = true
+                }
+            }
+        }
     }
 }
