@@ -15,6 +15,11 @@ class Card1ViewController: UIViewController {
     
     let imageCard = UIImageView()
     
+    let buttonSword = UIButton()
+    let buttonBalls = UIButton()
+    let buttonPipe = UIButton()
+    let buttonStone = UIButton()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,12 +37,40 @@ class Card1ViewController: UIViewController {
         imageCard.contentMode = .scaleAspectFill
         imageCard.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(imageCard)
+        
+        buttonSword.setImage(UIImage(named: "sword"), for: .normal)
+        buttonSword.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(buttonSword)
+        
+        buttonBalls.setImage(UIImage(named: "balls"), for: .normal)
+        buttonBalls.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(buttonBalls)
+        
+        buttonPipe.setImage(UIImage(named: "pipe"), for: .normal)
+        buttonPipe.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(buttonPipe)
+        
+        buttonStone.setImage(UIImage(named: "stone"), for: .normal)
+        buttonStone.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(buttonStone)
     }
     
     private func valueConstraints() {
         NSLayoutConstraint.activate([
             imageCard.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             imageCard.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            
+            buttonSword.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: -20),
+            buttonSword.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            
+            buttonBalls.topAnchor.constraint(equalTo: buttonSword.bottomAnchor, constant: 60),
+            buttonBalls.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            
+            buttonPipe.topAnchor.constraint(equalTo: buttonBalls.bottomAnchor, constant: 62),
+            buttonPipe.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            
+            buttonStone.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
+            buttonStone.bottomAnchor.constraint(equalTo: buttonSword.topAnchor, constant: -62),
         ])
         
         if UIScreen.main.bounds.size.height >= 812 {
