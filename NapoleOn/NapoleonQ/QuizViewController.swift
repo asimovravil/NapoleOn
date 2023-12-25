@@ -9,6 +9,9 @@ import UIKit
 
 class QuizGameViewController: UIViewController {
 
+    var teamNames: [String] = []
+    var currentTeamIndex = 0
+    
     let titleCard = UIView()
     let titleAmount = UILabel()
     let titleWord = UILabel()
@@ -18,6 +21,7 @@ class QuizGameViewController: UIViewController {
     let buttonThirdAnswer = UIButton()
     
     var currentQuestionIndex = 0
+    var correctAnswersCount = 0
     
     var quiz: [QuizNapoleon] = [
         QuizNapoleon(
@@ -94,6 +98,34 @@ class QuizGameViewController: UIViewController {
         buttonSecondAnswer.layer.cornerRadius = 30
         buttonThirdAnswer.layer.cornerRadius = 30
         titleCard.layer.cornerRadius = 10
+    }
+    
+    func navigateToResultViewController(score: Int) {
+        if score == quiz.count {
+            let winVC = WinQuizViewController()
+            winVC.teamName = teamNames[currentTeamIndex]
+            winVC.score = score
+            navigationController?.pushViewController(winVC, animated: true)
+        } else {
+            let loseVC = LoseQuizViewController()
+            loseVC.teamName = teamNames[currentTeamIndex]
+            loseVC.score = score
+            navigationController?.pushViewController(loseVC, animated: true)
+        }
+    }
+    
+    func resetForNextTeam() {
+        currentQuestionIndex = 0
+        correctAnswersCount = 0 
+        enableButtons()
+        valueUpdateForQuestion()
+    }
+
+    private func enableButtons() {
+        buttonFirstAnswer.isEnabled = true
+        buttonSecondAnswer.isEnabled = true
+        buttonThirdAnswer.isEnabled = true
+        resetButtonColors()
     }
     
     private func valueUI() {
@@ -256,25 +288,29 @@ class QuizGameViewController: UIViewController {
     @objc private func answerButtonTapped(_ sender: UIButton) {
         let correctAnswerIndex = quiz[currentQuestionIndex].correctAnswerIndex
         let isCorrectAnswer = sender.tag == correctAnswerIndex
-        
+
         if isCorrectAnswer {
+            correctAnswersCount += 1
             sender.backgroundColor = .green
         } else {
             sender.backgroundColor = .red
         }
-        
+
         disableButtons()
-        
+
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
             self.currentQuestionIndex += 1
             if self.currentQuestionIndex < self.quiz.count {
                 self.valueUpdateForQuestion()
                 self.resetButtonColors()
             } else {
-                print("good")
+                self.navigateToResultViewController(score: self.correctAnswersCount)
+                self.correctAnswersCount = 0
+                self.currentQuestionIndex = 0
             }
         }
     }
+
     
     private func disableButtons() {
         buttonFirstAnswer.isEnabled = false

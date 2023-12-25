@@ -9,6 +9,9 @@ import UIKit
 
 class LoseQuizViewController: UIViewController {
 
+    var teamName: String = ""
+    var score: Int = 0
+    
     let backgroundLose = UIImageView()
     let labelTeam = UILabel()
     let labelScore = UILabel()
@@ -20,6 +23,9 @@ class LoseQuizViewController: UIViewController {
         view.backgroundColor = UIColor(named: "backgroundCustom")
         valueUI()
         valueConstraints()
+        
+        labelTeam.text = "Score for \(teamName):"
+        labelScore.text = "\(score)/10"
     }
     
     override func viewDidLayoutSubviews() {
@@ -102,7 +108,15 @@ class LoseQuizViewController: UIViewController {
     }
     
     @objc private func buttonTrainingOption() {
+        guard let quizVC = navigationController?.viewControllers.first(where: { $0 is QuizGameViewController }) as? QuizGameViewController else { return }
 
+        if quizVC.currentTeamIndex < quizVC.teamNames.count - 1 {
+            quizVC.currentTeamIndex += 1
+            quizVC.resetForNextTeam()
+            navigationController?.popToViewController(quizVC, animated: true)
+        } else {
+            print("круг прошел")
+        }
     }
 }
 

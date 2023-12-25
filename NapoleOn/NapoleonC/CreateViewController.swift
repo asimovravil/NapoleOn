@@ -57,6 +57,7 @@ class CreateViewController: UIViewController {
         createStart.contentHorizontalAlignment = .center
         createStart.backgroundColor = UIColor(named: "redCustom")
         createStart.titleLabel?.numberOfLines = 0
+        createStart.isEnabled = false
         createStart.translatesAutoresizingMaskIntoConstraints = false
         createStart.addTarget(self, action: #selector(quizStartTapped), for: .touchUpInside)
         view.addSubview(createStart)
@@ -97,6 +98,7 @@ class CreateViewController: UIViewController {
     
     @objc private func quizStartTapped() {
         let quizGameViewController = QuizGameViewController()
+        quizGameViewController.teamNames = playerNames
         navigationController?.pushViewController(quizGameViewController, animated: true)
     }
     
