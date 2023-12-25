@@ -9,6 +9,8 @@ import UIKit
 
 class RouletteViewController: UIViewController {
     
+    var selectedCardNumber: Int?
+    
     let backgroundRoulette = UIImageView()
     let rotationRoulette = UIImageView()
     let buttonRoulette = UIButton(type: .system)
@@ -155,6 +157,13 @@ class RouletteViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
             self.rotationRoulette.layer.removeAllAnimations()
             print("spin complete")
+
+            // Randomly select an image
+            let randomImageNumber = Int.random(in: 1...3)
+            let imageName = "card\(randomImageNumber)"
+            self.imageBonus.image = UIImage(named: imageName)
+            self.selectedCardNumber = randomImageNumber
+
             self.cardBonus.isHidden = false
             self.imageBonus.isHidden = false
             self.labelBonus.isHidden = false
@@ -163,11 +172,30 @@ class RouletteViewController: UIViewController {
         }
     }
 
+
     @objc private func buttonRouletteOption() {
         valueRotation()
     }
 
     @objc private func buttonBonusOption() {
-        print("game")
+        guard let selectedCardNumber = selectedCardNumber else {
+            print("No card selected")
+            return
+        }
+
+        switch selectedCardNumber {
+        case 1:
+            let card1VC = Card1ViewController()
+            self.navigationController?.pushViewController(card1VC, animated: true)
+        case 2:
+            let card2VC = Card1ViewController()
+            self.navigationController?.pushViewController(card2VC, animated: true)
+        case 3:
+            let card3VC = Card1ViewController()
+            self.navigationController?.pushViewController(card3VC, animated: true)
+        default:
+            print("Invalid card number")
+        }
     }
+
 }
