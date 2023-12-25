@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		F1442D672B36D9C600266803 /* Card1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1442D662B36D9C600266803 /* Card1ViewController.swift */; };
+		F1442D6F2B39441000266803 /* WinQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1442D6E2B39441000266803 /* WinQuizViewController.swift */; };
+		F1442D712B39441B00266803 /* LoseQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1442D702B39441B00266803 /* LoseQuizViewController.swift */; };
 		F1813D562B36A3F700BD5ACE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1813D552B36A3F700BD5ACE /* AppDelegate.swift */; };
 		F1813D582B36A3F700BD5ACE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1813D572B36A3F700BD5ACE /* SceneDelegate.swift */; };
 		F1813D5A2B36A3F700BD5ACE /* TrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1813D592B36A3F700BD5ACE /* TrainingViewController.swift */; };
@@ -34,6 +36,8 @@
 
 /* Begin PBXFileReference section */
 		F1442D662B36D9C600266803 /* Card1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card1ViewController.swift; sourceTree = "<group>"; };
+		F1442D6E2B39441000266803 /* WinQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinQuizViewController.swift; sourceTree = "<group>"; };
+		F1442D702B39441B00266803 /* LoseQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoseQuizViewController.swift; sourceTree = "<group>"; };
 		F1813D522B36A3F700BD5ACE /* NapoleOn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NapoleOn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1813D552B36A3F700BD5ACE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1813D572B36A3F700BD5ACE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +75,61 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F1442D682B3943A900266803 /* Napoleon */ = {
+			isa = PBXGroup;
+			children = (
+				F1813D7C2B36B4B800BD5ACE /* LevelsViewController.swift */,
+				F1813D7E2B36B50800BD5ACE /* LevelsCell.swift */,
+				F1813D802B36BA5D00BD5ACE /* DetailViewController.swift */,
+				F1813D822B36BA6300BD5ACE /* DetailInfo.swift */,
+			);
+			path = Napoleon;
+			sourceTree = "<group>";
+		};
+		F1442D692B3943BB00266803 /* NapoleonQ */ = {
+			isa = PBXGroup;
+			children = (
+				F1813D862B36C68E00BD5ACE /* QuizViewController.swift */,
+				F1813D8A2B36CAB600BD5ACE /* QuizNapoleon.swift */,
+			);
+			path = NapoleonQ;
+			sourceTree = "<group>";
+		};
+		F1442D6A2B3943C300266803 /* NapoleonC */ = {
+			isa = PBXGroup;
+			children = (
+				F1813D8C2B36D09900BD5ACE /* CreateViewController.swift */,
+				F1813D8E2B36D0AE00BD5ACE /* CreateCell.swift */,
+			);
+			path = NapoleonC;
+			sourceTree = "<group>";
+		};
+		F1442D6B2B3943CB00266803 /* NapoleonW */ = {
+			isa = PBXGroup;
+			children = (
+				F1813D842B36C13D00BD5ACE /* LoaderViewController.swift */,
+				F1813D592B36A3F700BD5ACE /* TrainingViewController.swift */,
+			);
+			path = NapoleonW;
+			sourceTree = "<group>";
+		};
+		F1442D6C2B3943D400266803 /* NapoleonHidden */ = {
+			isa = PBXGroup;
+			children = (
+				F1442D662B36D9C600266803 /* Card1ViewController.swift */,
+			);
+			path = NapoleonHidden;
+			sourceTree = "<group>";
+		};
+		F1442D6D2B3943DE00266803 /* NapoleonR */ = {
+			isa = PBXGroup;
+			children = (
+				F1442D6E2B39441000266803 /* WinQuizViewController.swift */,
+				F1442D702B39441B00266803 /* LoseQuizViewController.swift */,
+			);
+			path = NapoleonR;
+			sourceTree = "<group>";
+		};
 		F1813D492B36A3F600BD5ACE = {
 			isa = PBXGroup;
 			children = (
@@ -93,17 +152,12 @@
 				F1813D692B36A56700BD5ACE /* Rubik */,
 				F1813D552B36A3F700BD5ACE /* AppDelegate.swift */,
 				F1813D572B36A3F700BD5ACE /* SceneDelegate.swift */,
-				F1813D842B36C13D00BD5ACE /* LoaderViewController.swift */,
-				F1813D592B36A3F700BD5ACE /* TrainingViewController.swift */,
-				F1813D8C2B36D09900BD5ACE /* CreateViewController.swift */,
-				F1813D8E2B36D0AE00BD5ACE /* CreateCell.swift */,
-				F1813D7C2B36B4B800BD5ACE /* LevelsViewController.swift */,
-				F1813D7E2B36B50800BD5ACE /* LevelsCell.swift */,
-				F1813D802B36BA5D00BD5ACE /* DetailViewController.swift */,
-				F1813D822B36BA6300BD5ACE /* DetailInfo.swift */,
-				F1813D862B36C68E00BD5ACE /* QuizViewController.swift */,
-				F1813D8A2B36CAB600BD5ACE /* QuizNapoleon.swift */,
-				F1442D662B36D9C600266803 /* Card1ViewController.swift */,
+				F1442D6B2B3943CB00266803 /* NapoleonW */,
+				F1442D6A2B3943C300266803 /* NapoleonC */,
+				F1442D682B3943A900266803 /* Napoleon */,
+				F1442D692B3943BB00266803 /* NapoleonQ */,
+				F1442D6C2B3943D400266803 /* NapoleonHidden */,
+				F1442D6D2B3943DE00266803 /* NapoleonR */,
 				F1813D5E2B36A3F800BD5ACE /* Assets.xcassets */,
 				F1813D602B36A3F800BD5ACE /* LaunchScreen.storyboard */,
 				F1813D632B36A3F800BD5ACE /* Info.plist */,
@@ -212,9 +266,11 @@
 				F1813D8B2B36CAB600BD5ACE /* QuizNapoleon.swift in Sources */,
 				F1813D582B36A3F700BD5ACE /* SceneDelegate.swift in Sources */,
 				F1813D8F2B36D0AE00BD5ACE /* CreateCell.swift in Sources */,
+				F1442D6F2B39441000266803 /* WinQuizViewController.swift in Sources */,
 				F1813D812B36BA5D00BD5ACE /* DetailViewController.swift in Sources */,
 				F1813D872B36C68E00BD5ACE /* QuizViewController.swift in Sources */,
 				F1442D672B36D9C600266803 /* Card1ViewController.swift in Sources */,
+				F1442D712B39441B00266803 /* LoseQuizViewController.swift in Sources */,
 				F1813D7D2B36B4B800BD5ACE /* LevelsViewController.swift in Sources */,
 				F1813D7F2B36B50800BD5ACE /* LevelsCell.swift in Sources */,
 			);
