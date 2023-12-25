@@ -23,6 +23,7 @@ class Card1ViewController: UIViewController {
         valueNavigationBar()
         view.backgroundColor = UIColor(named: "backgroundCustom")
         startTimer()
+        createImageStackView()
     }
     
     private func valueUI() {
@@ -42,12 +43,51 @@ class Card1ViewController: UIViewController {
         if UIScreen.main.bounds.size.height >= 812 {
             NSLayoutConstraint.activate([
                 imageCard.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
-                imageCard.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -80),
+                imageCard.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -90),
             ])
         } else {
             NSLayoutConstraint.activate([
                 imageCard.topAnchor.constraint(equalTo: view.topAnchor, constant: 70),
                 imageCard.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -80),
+            ])
+        }
+    }
+    
+    private func createImageStackView() {
+        let image1 = UIImageView()
+        image1.image = UIImage(named: "sword")
+        image1.contentMode = .scaleAspectFill
+        
+        let image2 = UIImageView()
+        image2.image = UIImage(named: "balls")
+        image2.contentMode = .scaleAspectFill
+        
+        let image3 = UIImageView()
+        image3.image = UIImage(named: "pipe")
+        image3.contentMode = .scaleAspectFill
+        
+        let image4 = UIImageView()
+        image4.image = UIImage(named: "stone")
+        image4.contentMode = .scaleAspectFill
+        
+        let stackView = UIStackView(arrangedSubviews: [image1, image2, image3, image4])
+        stackView.axis = .horizontal
+        stackView.spacing = 24
+        stackView.alignment = .center
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(stackView)
+        
+        NSLayoutConstraint.activate([
+            stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+        ])
+        
+        if UIScreen.main.bounds.size.height >= 812 {
+            NSLayoutConstraint.activate([
+                stackView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -30)
+            ])
+        } else {
+            NSLayoutConstraint.activate([
+                stackView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20)
             ])
         }
     }
