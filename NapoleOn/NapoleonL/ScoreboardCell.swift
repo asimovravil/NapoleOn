@@ -11,12 +11,13 @@ final class ScoreboardCell: UITableViewCell {
     
     static let reuseID = String(describing: ScoreboardCell.self)
     
-    let cellPlace = UIImageView()
     let cellName = UILabel()
     let correctAnswerLabel = UILabel()
     let timerLabel = UILabel()
     let labelRound1 = UILabel()
     let labelRound2 = UILabel()
+    let placeBoard = UIView()
+    let placeLabel = UILabel()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -31,17 +32,11 @@ final class ScoreboardCell: UITableViewCell {
     }
     
     private func valueUI() {
-        contentView.addSubview(cellPlace)
         contentView.addSubview(cellName)
         contentView.addSubview(correctAnswerLabel)
         contentView.addSubview(timerLabel)
         contentView.addSubview(labelRound1)
         contentView.addSubview(labelRound2)
-        
-        cellPlace.image = UIImage(named: "place1")
-        cellPlace.layer.masksToBounds = true
-        cellPlace.contentMode = .scaleAspectFill
-        cellPlace.translatesAutoresizingMaskIntoConstraints = false
         
         cellName.text = "Team 1"
         cellName.textColor = .white
@@ -72,15 +67,24 @@ final class ScoreboardCell: UITableViewCell {
         labelRound2.numberOfLines = 0
         labelRound2.font = UIFont(name: "Rubik-Regular", size: 12)
         labelRound2.translatesAutoresizingMaskIntoConstraints = false
+        
+        placeBoard.backgroundColor = UIColor(named: "buttonQuizCustom")
+        placeBoard.translatesAutoresizingMaskIntoConstraints = false
+        placeBoard.layer.cornerRadius = 10
+        contentView.addSubview(placeBoard)
+        
+        placeLabel.text = "1"
+        placeLabel.textColor = .white
+        placeLabel.numberOfLines = 0
+        placeLabel.font = UIFont(name: "Rubik-Medium", size: 16)
+        placeLabel.translatesAutoresizingMaskIntoConstraints = false
+        contentView.addSubview(placeLabel)
     }
     
     private func valueConstraints() {
         NSLayoutConstraint.activate([
-            cellPlace.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
-            cellPlace.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
-            
             cellName.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
-            cellName.leadingAnchor.constraint(equalTo: cellPlace.trailingAnchor, constant: 16),
+            cellName.leadingAnchor.constraint(equalTo: placeBoard.trailingAnchor, constant: 16),
             
             labelRound1.bottomAnchor.constraint(equalTo: correctAnswerLabel.topAnchor, constant: -4),
             labelRound1.centerXAnchor.constraint(equalTo: correctAnswerLabel.centerXAnchor),
@@ -93,6 +97,14 @@ final class ScoreboardCell: UITableViewCell {
             
             timerLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
             timerLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
+            
+            placeBoard.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+            placeBoard.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
+            placeBoard.widthAnchor.constraint(equalToConstant: 40),
+            placeBoard.heightAnchor.constraint(equalToConstant: 40),
+            
+            placeLabel.centerXAnchor.constraint(equalTo: placeBoard.centerXAnchor),
+            placeLabel.centerYAnchor.constraint(equalTo: placeBoard.centerYAnchor),
         ])
     }
 }

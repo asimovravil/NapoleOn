@@ -106,6 +106,13 @@ extension ScoreboardViewController: UITableViewDataSource, UITableViewDelegate {
         cell.cellName.text = teamName
         cell.correctAnswerLabel.text = "\(correctAnswersCount)/10"
         cell.timerLabel.text = formatTime(timer)
+        
+        if indexPath.row == 0 {
+            cell.placeBoard.backgroundColor = UIColor(named: "yellowCustom")
+        } else {
+            cell.placeBoard.backgroundColor = UIColor(named: "buttonQuizCustom")
+            cell.placeLabel.text = "\(indexPath.row + 1)"
+        }
         return cell
     }
     
