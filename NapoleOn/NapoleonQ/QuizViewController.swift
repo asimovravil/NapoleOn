@@ -88,8 +88,14 @@ class QuizGameViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+
+        if let titleLabel = navigationItem.titleView as? UILabel {
+            titleLabel.text = teamNames[currentTeamIndex]
+        }
+
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
+
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -242,7 +248,7 @@ class QuizGameViewController: UIViewController {
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         
         let titleLabel = UILabel()
-        titleLabel.text = "Quiz"
+        titleLabel.text = teamNames[currentTeamIndex]
         titleLabel.textColor = .white
         titleLabel.font = UIFont(name: "Rubik-Medium", size: 24)
         navigationItem.titleView = titleLabel
