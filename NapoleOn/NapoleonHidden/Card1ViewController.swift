@@ -8,6 +8,11 @@
 import UIKit
 
 class Card1ViewController: UIViewController {
+    
+    var isSwordPressed = false
+    var isBallsPressed = false
+    var isPipePressed = false
+    var isStonePressed = false
 
     var timer: Timer?
     var timeRemaining: TimeInterval = 600
@@ -184,8 +189,14 @@ class Card1ViewController: UIViewController {
             updateTimerLabel()
         } else {
             timer?.invalidate()
-            print("Таймер истек!")
+            navigateToLoseCardViewController()
         }
+    }
+    
+    private func navigateToLoseCardViewController() {
+        let loseVC = LoseCardViewController()
+        loseVC.navigationItem.hidesBackButton = true
+        navigationController?.pushViewController(loseVC, animated: true)
     }
     
     private func updateTimerLabel() {
@@ -227,6 +238,9 @@ class Card1ViewController: UIViewController {
     }
     
     @objc private func buttonSwordOption() {
+        isSwordPressed = true
+        checkForWinCondition()
+        
         swordSuccess.isHidden = false
         
         Timer.scheduledTimer(withTimeInterval: 2.0, repeats: false) { [weak self] timer in
@@ -236,6 +250,9 @@ class Card1ViewController: UIViewController {
     }
     
     @objc private func buttonBallsOption() {
+        isBallsPressed = true
+        checkForWinCondition()
+        
         ballsSuccess.isHidden = false
         
         Timer.scheduledTimer(withTimeInterval: 2.0, repeats: false) { [weak self] timer in
@@ -245,6 +262,9 @@ class Card1ViewController: UIViewController {
     }
     
     @objc private func buttonPipeOption() {
+        isPipePressed = true
+        checkForWinCondition()
+        
         pipeSuccess.isHidden = false
         
         Timer.scheduledTimer(withTimeInterval: 2.0, repeats: false) { [weak self] timer in
@@ -254,6 +274,9 @@ class Card1ViewController: UIViewController {
     }
     
     @objc private func buttonStoneOption() {
+        isStonePressed = true
+        checkForWinCondition()
+        
         stoneSuccess.isHidden = false
         
         Timer.scheduledTimer(withTimeInterval: 2.0, repeats: false) { [weak self] timer in
@@ -308,5 +331,17 @@ class Card1ViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    private func checkForWinCondition() {
+        if isSwordPressed && isBallsPressed && isPipePressed && isStonePressed {
+            navigateToWinCardViewController()
+        }
+    }
+
+    private func navigateToWinCardViewController() {
+        let winVC = WinCardViewController()
+        winVC.timer = timeRemaining
+        navigationController?.pushViewController(winVC, animated: true)
     }
 }

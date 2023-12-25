@@ -11,6 +11,7 @@ class WinCardViewController: UIViewController {
 
     var teamName: String = ""
     var score: Int = 0
+    var timer: TimeInterval = 0
     
     let backgroundWin = UIImageView()
     let labelTime = UILabel()
@@ -23,12 +24,19 @@ class WinCardViewController: UIViewController {
         view.backgroundColor = UIColor(named: "backgroundCustom")
         valueUI()
         valueConstraints()
+        updateLabelTime()
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
         buttonNext.layer.cornerRadius = 10
+    }
+    
+    private func updateLabelTime() {
+        let minutes = Int(timer) / 60
+        let seconds = Int(timer) % 60
+        labelTime.text = String(format: "%02d:%02d", minutes, seconds)
     }
 
     private func valueUI() {
