@@ -23,6 +23,13 @@ class CreateCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         setupUI()
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        contentView.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc private func dismissKeyboard() {
+        teamPlaceHolder.resignFirstResponder()
     }
     
     required init?(coder: NSCoder) {

@@ -111,6 +111,8 @@ class DetailInfoViewController: UIViewController {
 
     
     @objc private func buttonDetailOption() {
-        print("quiz")
+        let createVC = CreateViewController()
+        createVC.navigationItem.hidesBackButton = true
+        self.navigationController?.pushViewController(createVC, animated: true)
     }
 }
