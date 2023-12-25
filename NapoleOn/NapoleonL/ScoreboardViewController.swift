@@ -9,6 +9,10 @@ import UIKit
 
 class ScoreboardViewController: UIViewController {
     
+    var teamNames: [String] = []
+    var correctAnswersCount: Int = 0
+    var timer: TimeInterval = 0
+    
     let imageBadge = UIImageView()
     let labelWin = UILabel()
     let labelTeam = UILabel()
@@ -88,7 +92,7 @@ class ScoreboardViewController: UIViewController {
 extension ScoreboardViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return teamNames.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -97,9 +101,20 @@ extension ScoreboardViewController: UITableViewDataSource, UITableViewDelegate {
         }
         cell.selectionStyle = .none
         cell.backgroundColor = .clear
+        
+        let teamName = teamNames[indexPath.row]
+        cell.cellName.text = teamName
+        cell.correctAnswerLabel.text = "\(correctAnswersCount)/10"
+        cell.timerLabel.text = formatTime(timer)
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    }
+    
+    private func formatTime(_ time: TimeInterval) -> String {
+        let minutes = Int(time) / 60
+        let seconds = Int(time) % 60
+        return String(format: "%02d:%02d", minutes, seconds)
     }
 }

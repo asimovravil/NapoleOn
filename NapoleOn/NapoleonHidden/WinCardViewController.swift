@@ -124,10 +124,11 @@ class WinCardViewController: UIViewController {
             cardVC.currentTeamIndex = currentTeamIndex
             navigationController?.popToViewController(cardVC, animated: true)
         } else {
-            print("круг прошел")
-            let rouletteVC = RouletteViewController()
-            rouletteVC.teamNames = teamNames
-            navigationController?.pushViewController(rouletteVC, animated: true)
+            let scoreboardVC = ScoreboardViewController()
+            scoreboardVC.teamNames = teamNames
+            scoreboardVC.correctAnswersCount = correctAnswersCount
+            scoreboardVC.timer = timer
+            navigationController?.pushViewController(scoreboardVC, animated: true)
         }
     }
 }

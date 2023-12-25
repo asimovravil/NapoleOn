@@ -103,10 +103,10 @@ class LoseCardViewController: UIViewController {
             cardVC.currentTeamIndex = currentTeamIndex
             navigationController?.popToViewController(cardVC, animated: true)
         } else {
-            print("круг прошел")
-            let rouletteVC = RouletteViewController()
-            rouletteVC.teamNames = teamNames
-            navigationController?.pushViewController(rouletteVC, animated: true)
+            let scoreboardVC = ScoreboardViewController()
+            scoreboardVC.teamNames = teamNames
+            scoreboardVC.correctAnswersCount = correctAnswersCount
+            navigationController?.pushViewController(scoreboardVC, animated: true)
         }
     }
 }
