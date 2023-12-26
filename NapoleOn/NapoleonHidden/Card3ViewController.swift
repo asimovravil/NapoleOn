@@ -1,23 +1,23 @@
 //
-//  Card2ViewController.swift
+//  Card3ViewController.swift
 //  NapoleOn
 //
-//  Created by Ravil on 23.12.2023.
+//  Created by Ravil on 26.12.2023.
 //
 
 import UIKit
 
-class Card2ViewController: UIViewController {
+class Card3ViewController: UIViewController {
     
     var correctAnswersCount = 0
     var teamNames: [String] = []
     var currentTeamIndex: Int = 0
     
     var isSwordPressed = false
-    var isGunPressed = false
-    var isShieldPressed = false
+    var isBallsPressed = false
+    var isPipePressed = false
     var isStonePressed = false
-    var isBigStonePressed = false
+    var isPlacePressed = false
 
     var timer: Timer?
     var timeRemaining: TimeInterval = 600
@@ -26,16 +26,16 @@ class Card2ViewController: UIViewController {
     let imageCard = UIImageView()
     
     let buttonSword = UIButton()
-    let buttonGun = UIButton()
-    let ButtonShield = UIButton()
+    let buttonBalls = UIButton()
+    let buttonPipe = UIButton()
     let buttonStone = UIButton()
-    let buttonBigStone = UIButton()
+    let buttonPlace = UIButton()
     
     let swordSuccess = UIImageView()
-    let gunSuccess = UIImageView()
-    let shieldSuccess = UIImageView()
+    let ballsSuccess = UIImageView()
+    let pipeSuccess = UIImageView()
     let stoneSuccess = UIImageView()
-    let bigstoneSuccess = UIImageView()
+    let placeSuccess = UIImageView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,13 +55,13 @@ class Card2ViewController: UIViewController {
     
     private func resetUI() {
         isSwordPressed = false
-        isGunPressed = false
-        isShieldPressed = false
+        isBallsPressed = false
+        isPipePressed = false
         isStonePressed = false
 
         swordSuccess.isHidden = true
-        gunSuccess.isHidden = true
-        shieldSuccess.isHidden = true
+        ballsSuccess.isHidden = true
+        pipeSuccess.isHidden = true
         stoneSuccess.isHidden = true
 
         unhideAllImages()
@@ -81,7 +81,7 @@ class Card2ViewController: UIViewController {
     }
     
     private func valueUI() {
-        imageCard.image = UIImage(named: "imageCard2")
+        imageCard.image = UIImage(named: "imageCard3")
         imageCard.layer.masksToBounds = true
         imageCard.contentMode = .scaleAspectFill
         imageCard.translatesAutoresizingMaskIntoConstraints = false
@@ -92,25 +92,25 @@ class Card2ViewController: UIViewController {
         buttonSword.addTarget(self, action: #selector(buttonSwordOption), for: .touchUpInside)
         view.addSubview(buttonSword)
         
-        buttonGun.setImage(UIImage(named: "gun"), for: .normal)
-        buttonGun.translatesAutoresizingMaskIntoConstraints = false
-        buttonGun.addTarget(self, action: #selector(buttonBallsOption), for: .touchUpInside)
-        view.addSubview(buttonGun)
+        buttonBalls.setImage(UIImage(named: "balls"), for: .normal)
+        buttonBalls.translatesAutoresizingMaskIntoConstraints = false
+        buttonBalls.addTarget(self, action: #selector(buttonBallsOption), for: .touchUpInside)
+        view.addSubview(buttonBalls)
         
-        ButtonShield.setImage(UIImage(named: "shield"), for: .normal)
-        ButtonShield.translatesAutoresizingMaskIntoConstraints = false
-        ButtonShield.addTarget(self, action: #selector(buttonPipeOption), for: .touchUpInside)
-        view.addSubview(ButtonShield)
+        buttonPipe.setImage(UIImage(named: "pipe"), for: .normal)
+        buttonPipe.translatesAutoresizingMaskIntoConstraints = false
+        buttonPipe.addTarget(self, action: #selector(buttonPipeOption), for: .touchUpInside)
+        view.addSubview(buttonPipe)
         
         buttonStone.setImage(UIImage(named: "stone"), for: .normal)
         buttonStone.translatesAutoresizingMaskIntoConstraints = false
         buttonStone.addTarget(self, action: #selector(buttonStoneOption), for: .touchUpInside)
         view.addSubview(buttonStone)
         
-        buttonBigStone.setImage(UIImage(named: "bigstone"), for: .normal)
-        buttonBigStone.translatesAutoresizingMaskIntoConstraints = false
-        buttonBigStone.addTarget(self, action: #selector(buttonBigStoneOption), for: .touchUpInside)
-        view.addSubview(buttonBigStone)
+        buttonPlace.setImage(UIImage(named: "place"), for: .normal)
+        buttonPlace.translatesAutoresizingMaskIntoConstraints = false
+        buttonPlace.addTarget(self, action: #selector(buttonPlaceOption), for: .touchUpInside)
+        view.addSubview(buttonPlace)
         
         swordSuccess.image = UIImage(named: "swordSuccess")
         swordSuccess.layer.masksToBounds = true
@@ -119,19 +119,19 @@ class Card2ViewController: UIViewController {
         swordSuccess.isHidden = true
         view.addSubview(swordSuccess)
         
-        shieldSuccess.image = UIImage(named: "shieldSuccess")
-        shieldSuccess.layer.masksToBounds = true
-        shieldSuccess.contentMode = .scaleAspectFill
-        shieldSuccess.translatesAutoresizingMaskIntoConstraints = false
-        shieldSuccess.isHidden = true
-        view.addSubview(shieldSuccess)
+        pipeSuccess.image = UIImage(named: "pipeSuccess")
+        pipeSuccess.layer.masksToBounds = true
+        pipeSuccess.contentMode = .scaleAspectFill
+        pipeSuccess.translatesAutoresizingMaskIntoConstraints = false
+        pipeSuccess.isHidden = true
+        view.addSubview(pipeSuccess)
         
-        gunSuccess.image = UIImage(named: "gunSuccess")
-        gunSuccess.layer.masksToBounds = true
-        gunSuccess.contentMode = .scaleAspectFill
-        gunSuccess.translatesAutoresizingMaskIntoConstraints = false
-        gunSuccess.isHidden = true
-        view.addSubview(gunSuccess)
+        ballsSuccess.image = UIImage(named: "ballsSuccess")
+        ballsSuccess.layer.masksToBounds = true
+        ballsSuccess.contentMode = .scaleAspectFill
+        ballsSuccess.translatesAutoresizingMaskIntoConstraints = false
+        ballsSuccess.isHidden = true
+        view.addSubview(ballsSuccess)
         
         stoneSuccess.image = UIImage(named: "stoneSuccess")
         stoneSuccess.layer.masksToBounds = true
@@ -140,12 +140,12 @@ class Card2ViewController: UIViewController {
         stoneSuccess.isHidden = true
         view.addSubview(stoneSuccess)
         
-        bigstoneSuccess.image = UIImage(named: "bigstoneSuccess")
-        bigstoneSuccess.layer.masksToBounds = true
-        bigstoneSuccess.contentMode = .scaleAspectFill
-        bigstoneSuccess.translatesAutoresizingMaskIntoConstraints = false
-        bigstoneSuccess.isHidden = true
-        view.addSubview(bigstoneSuccess)
+        placeSuccess.image = UIImage(named: "placeSuccess")
+        placeSuccess.layer.masksToBounds = true
+        placeSuccess.contentMode = .scaleAspectFill
+        placeSuccess.translatesAutoresizingMaskIntoConstraints = false
+        placeSuccess.isHidden = true
+        view.addSubview(placeSuccess)
     }
     
     private func valueConstraints() {
@@ -153,35 +153,35 @@ class Card2ViewController: UIViewController {
             imageCard.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             imageCard.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             
-            buttonSword.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 100),
+            buttonSword.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 80),
             buttonSword.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             
-            buttonGun.topAnchor.constraint(equalTo: buttonSword.bottomAnchor, constant: 120),
-            buttonGun.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            buttonBalls.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            buttonBalls.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -120),
             
-            ButtonShield.topAnchor.constraint(equalTo: buttonStone.bottomAnchor, constant: 10),
-            ButtonShield.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            buttonPipe.trailingAnchor.constraint(equalTo: buttonSword.leadingAnchor, constant: 10),
+            buttonPipe.bottomAnchor.constraint(equalTo: buttonSword.topAnchor, constant: -120),
             
-            buttonStone.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 110),
-            buttonStone.bottomAnchor.constraint(equalTo: buttonSword.topAnchor, constant: -62),
+            buttonStone.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            buttonStone.bottomAnchor.constraint(equalTo: buttonBalls.topAnchor, constant: -24),
             
-            buttonBigStone.topAnchor.constraint(equalTo: buttonGun.topAnchor, constant: 10),
-            buttonBigStone.trailingAnchor.constraint(equalTo: buttonGun.leadingAnchor, constant: -10),
+            buttonPlace.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
+            buttonPlace.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             
             swordSuccess.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             swordSuccess.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             
-            gunSuccess.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            gunSuccess.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            ballsSuccess.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            ballsSuccess.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             
-            shieldSuccess.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            shieldSuccess.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            pipeSuccess.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            pipeSuccess.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             
             stoneSuccess.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             stoneSuccess.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             
-            bigstoneSuccess.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            bigstoneSuccess.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            placeSuccess.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            placeSuccess.centerYAnchor.constraint(equalTo: view.centerYAnchor),
         ])
         
         if UIScreen.main.bounds.size.height >= 812 {
@@ -203,11 +203,11 @@ class Card2ViewController: UIViewController {
         image1.contentMode = .scaleAspectFill
         
         let image2 = UIImageView()
-        image2.image = UIImage(named: "gun")
+        image2.image = UIImage(named: "balls")
         image2.contentMode = .scaleAspectFill
         
         let image3 = UIImageView()
-        image3.image = UIImage(named: "shield")
+        image3.image = UIImage(named: "pipe")
         image3.contentMode = .scaleAspectFill
         
         let image4 = UIImageView()
@@ -215,7 +215,7 @@ class Card2ViewController: UIViewController {
         image4.contentMode = .scaleAspectFill
         
         let image5 = UIImageView()
-        image5.image = UIImage(named: "bigstone")
+        image5.image = UIImage(named: "place")
         image5.contentMode = .scaleAspectFill
         
         let stackView = UIStackView(arrangedSubviews: [image1, image2, image3, image4, image5])
@@ -314,25 +314,25 @@ class Card2ViewController: UIViewController {
     }
     
     @objc private func buttonBallsOption() {
-        isGunPressed = true
+        isBallsPressed = true
         checkForWinCondition()
         
-        gunSuccess.isHidden = false
+        ballsSuccess.isHidden = false
         
         Timer.scheduledTimer(withTimeInterval: 2.0, repeats: false) { [weak self] timer in
-            self?.gunSuccess.isHidden = true
+            self?.ballsSuccess.isHidden = true
             self?.hideImage2()
         }
     }
     
     @objc private func buttonPipeOption() {
-        isShieldPressed = true
+        isPipePressed = true
         checkForWinCondition()
         
-        shieldSuccess.isHidden = false
+        pipeSuccess.isHidden = false
         
         Timer.scheduledTimer(withTimeInterval: 2.0, repeats: false) { [weak self] timer in
-            self?.shieldSuccess.isHidden = true
+            self?.pipeSuccess.isHidden = true
             self?.hideImage3()
         }
     }
@@ -349,14 +349,14 @@ class Card2ViewController: UIViewController {
         }
     }
     
-    @objc private func buttonBigStoneOption() {
-        isBigStonePressed = true
+    @objc private func buttonPlaceOption() {
+        isPlacePressed = true
         checkForWinCondition()
         
-        bigstoneSuccess.isHidden = false
+        placeSuccess.isHidden = false
         
         Timer.scheduledTimer(withTimeInterval: 2.0, repeats: false) { [weak self] timer in
-            self?.bigstoneSuccess.isHidden = true
+            self?.placeSuccess.isHidden = true
             self?.hideImage5()
         }
     }
@@ -422,7 +422,7 @@ class Card2ViewController: UIViewController {
     }
     
     private func checkForWinCondition() {
-        if isSwordPressed && isGunPressed && isShieldPressed && isStonePressed {
+        if isSwordPressed && isBallsPressed && isPipePressed && isStonePressed {
             navigateToWinCardViewController()
         }
     }
