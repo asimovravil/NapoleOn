@@ -30,6 +30,8 @@ class RouletteViewController: UIViewController {
         
         valueUI()
         valueConstraints()
+        
+        print("RouletteViewController - correctAnswersCount: \(correctAnswersCount)")
     }
     
     override func viewDidLayoutSubviews() {

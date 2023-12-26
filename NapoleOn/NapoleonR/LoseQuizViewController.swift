@@ -26,6 +26,8 @@ class LoseQuizViewController: UIViewController {
         valueUI()
         valueConstraints()
         
+        print("LoseQuizViewController - correctAnswersCount: \(correctAnswersCount)")
+
         labelTeam.text = "Score for \(teamName):"
         labelScore.text = "\(score)/10"
     }
@@ -119,7 +121,7 @@ class LoseQuizViewController: UIViewController {
         } else {
             let rouletteVC = RouletteViewController()
             rouletteVC.teamNames = quizVC.teamNames
-            rouletteVC.correctAnswersCount = quizVC.correctAnswersCount
+            rouletteVC.correctAnswersCount = self.correctAnswersCount
             self.navigationController?.pushViewController(rouletteVC, animated: true)
         }
     }

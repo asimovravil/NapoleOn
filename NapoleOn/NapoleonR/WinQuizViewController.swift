@@ -26,6 +26,8 @@ class WinQuizViewController: UIViewController {
         valueUI()
         valueConstraints()
         
+        print("WinQuizViewController - correctAnswersCount: \(correctAnswersCount)")
+        
         labelTeam.text = "Score for \(teamName):"
         labelScore.text = "\(score)/10"
     }
@@ -119,7 +121,7 @@ class WinQuizViewController: UIViewController {
         } else {
             let rouletteVC = RouletteViewController()
             rouletteVC.teamNames = quizVC.teamNames 
-            rouletteVC.correctAnswersCount = quizVC.correctAnswersCount
+            rouletteVC.correctAnswersCount = self.correctAnswersCount
             self.navigationController?.pushViewController(rouletteVC, animated: true)
         }
     }

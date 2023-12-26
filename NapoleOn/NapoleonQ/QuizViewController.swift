@@ -110,14 +110,16 @@ class QuizGameViewController: UIViewController {
         if score == quiz.count {
             let winVC = WinQuizViewController()
             winVC.teamName = teamNames[currentTeamIndex]
-            winVC.correctAnswersCount = correctAnswersCount
+            winVC.correctAnswersCount = self.correctAnswersCount
             winVC.score = score
+            print("QuizGameViewController - correctAnswersCount: \(correctAnswersCount)")
             navigationController?.pushViewController(winVC, animated: true)
         } else {
             let loseVC = LoseQuizViewController()
             loseVC.teamName = teamNames[currentTeamIndex]
-            loseVC.correctAnswersCount = correctAnswersCount
+            loseVC.correctAnswersCount = self.correctAnswersCount
             loseVC.score = score
+            print("QuizGameViewController - correctAnswersCount: \(correctAnswersCount)")
             navigationController?.pushViewController(loseVC, animated: true)
         }
     }
