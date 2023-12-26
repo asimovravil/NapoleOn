@@ -193,12 +193,12 @@ class RouletteViewController: UIViewController {
             card1VC.correctAnswersCount = self.correctAnswersCount
             self.navigationController?.pushViewController(card1VC, animated: true)
         case 2:
-            let card2VC = Card1ViewController()
+            let card2VC = Card2ViewController()
             card2VC.teamNames = self.teamNames
             card2VC.correctAnswersCount = self.correctAnswersCount
             self.navigationController?.pushViewController(card2VC, animated: true)
         case 3:
-            let card3VC = Card1ViewController()
+            let card3VC = Card3ViewController()
             card3VC.teamNames = self.teamNames
             card3VC.correctAnswersCount = self.correctAnswersCount
             self.navigationController?.pushViewController(card3VC, animated: true)
