@@ -8,6 +8,8 @@
 import UIKit
 
 class WinQuizViewController: UIViewController {
+    
+    var correctAnswersCount = 0
 
     var teamName: String = ""
     var score: Int = 0
