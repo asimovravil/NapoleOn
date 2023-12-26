@@ -9,6 +9,8 @@ import UIKit
 
 class Card1ViewController: UIViewController {
     
+    var selectedCardNumber: Int?
+    
     var correctAnswersCount = 0
     var teamNames: [String] = []
     var currentTeamIndex: Int = 0
@@ -234,6 +236,7 @@ class Card1ViewController: UIViewController {
         loseVC.teamNames = self.teamNames
         loseVC.correctAnswersCount = self.correctAnswersCount
         loseVC.currentTeamIndex = self.currentTeamIndex
+        loseVC.selectedCardNumber = self.selectedCardNumber
         loseVC.navigationItem.hidesBackButton = true
         navigationController?.pushViewController(loseVC, animated: true)
     }
@@ -386,6 +389,7 @@ class Card1ViewController: UIViewController {
         winVC.teamNames = self.teamNames
         winVC.correctAnswersCount = self.correctAnswersCount
         winVC.currentTeamIndex = self.currentTeamIndex
+        winVC.selectedCardNumber = self.selectedCardNumber
         navigationController?.pushViewController(winVC, animated: true)
     }
 }

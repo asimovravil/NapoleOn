@@ -25,6 +25,10 @@ class ScoreboardViewController: UIViewController {
         valueUI()
         valueConstraints()
         tableView.reloadData()
+        
+        print("Team Names: \(teamNames)")
+        print("Correct Answers Count: \(correctAnswersCount)")
+        print("Timer: \(timer)")
     }
     
     private func valueUI() {
@@ -92,6 +96,7 @@ class ScoreboardViewController: UIViewController {
 extension ScoreboardViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print("Number of rows: \(teamNames.count)")
         return teamNames.count
     }
     

@@ -9,6 +9,8 @@ import UIKit
 
 class LoseCardViewController: UIViewController {
     
+    var selectedCardNumber: Int?
+    
     var correctAnswersCount = 0
     var teamNames: [String] = []
     var currentTeamIndex: Int = 0
@@ -99,14 +101,33 @@ class LoseCardViewController: UIViewController {
     @objc private func buttonTrainingOption() {
         if currentTeamIndex < teamNames.count - 1 {
             currentTeamIndex += 1
-            guard let cardVC = navigationController?.viewControllers.first(where: { $0 is Card1ViewController }) as? Card1ViewController else { return }
-            cardVC.currentTeamIndex = currentTeamIndex
-            navigationController?.popToViewController(cardVC, animated: true)
+            navigateToGameController()
         } else {
             let scoreboardVC = ScoreboardViewController()
             scoreboardVC.teamNames = teamNames
             scoreboardVC.correctAnswersCount = correctAnswersCount
             navigationController?.pushViewController(scoreboardVC, animated: true)
+        }
+    }
+
+    private func navigateToGameController() {
+        guard let cardNumber = selectedCardNumber else { return }
+
+        switch cardNumber {
+        case 1:
+            let card1VC = Card1ViewController()
+            card1VC.currentTeamIndex = currentTeamIndex
+            navigationController?.pushViewController(card1VC, animated: true)
+        case 2:
+            let card2VC = Card2ViewController()
+            card2VC.currentTeamIndex = currentTeamIndex
+            navigationController?.pushViewController(card2VC, animated: true)
+        case 3:
+            let card3VC = Card3ViewController()
+            card3VC.currentTeamIndex = currentTeamIndex
+            navigationController?.pushViewController(card3VC, animated: true)
+        default:
+            print("Invalid card number")
         }
     }
 }
