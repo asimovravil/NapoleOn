@@ -17,6 +17,8 @@
 		F1442D7C2B39C40900266803 /* ScoreboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1442D7A2B39C40900266803 /* ScoreboardViewController.swift */; };
 		F1442D802B3B1EC300266803 /* Card2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1442D7F2B3B1EC300266803 /* Card2ViewController.swift */; };
 		F1442D822B3B267200266803 /* Card3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1442D812B3B267200266803 /* Card3ViewController.swift */; };
+		F1442D862B3B297800266803 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1442D852B3B297800266803 /* SettingsViewController.swift */; };
+		F1442D882B3B2A8B00266803 /* PrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1442D872B3B2A8B00266803 /* PrivacyViewController.swift */; };
 		F1813D562B36A3F700BD5ACE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1813D552B36A3F700BD5ACE /* AppDelegate.swift */; };
 		F1813D582B36A3F700BD5ACE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1813D572B36A3F700BD5ACE /* SceneDelegate.swift */; };
 		F1813D5A2B36A3F700BD5ACE /* TrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1813D592B36A3F700BD5ACE /* TrainingViewController.swift */; };
@@ -52,6 +54,8 @@
 		F1442D7A2B39C40900266803 /* ScoreboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreboardViewController.swift; sourceTree = "<group>"; };
 		F1442D7F2B3B1EC300266803 /* Card2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card2ViewController.swift; sourceTree = "<group>"; };
 		F1442D812B3B267200266803 /* Card3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card3ViewController.swift; sourceTree = "<group>"; };
+		F1442D852B3B297800266803 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		F1442D872B3B2A8B00266803 /* PrivacyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivacyViewController.swift; sourceTree = "<group>"; };
 		F1813D522B36A3F700BD5ACE /* NapoleOn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NapoleOn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1813D552B36A3F700BD5ACE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1813D572B36A3F700BD5ACE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -154,6 +158,8 @@
 			children = (
 				F1442D7A2B39C40900266803 /* ScoreboardViewController.swift */,
 				F1442D792B39C40900266803 /* ScoreboardCell.swift */,
+				F1442D872B3B2A8B00266803 /* PrivacyViewController.swift */,
+				F1442D852B3B297800266803 /* SettingsViewController.swift */,
 			);
 			path = NapoleonL;
 			sourceTree = "<group>";
@@ -298,10 +304,12 @@
 				F1442D752B39944000266803 /* WinCardViewController.swift in Sources */,
 				F1813D582B36A3F700BD5ACE /* SceneDelegate.swift in Sources */,
 				F1813D8F2B36D0AE00BD5ACE /* CreateCell.swift in Sources */,
+				F1442D882B3B2A8B00266803 /* PrivacyViewController.swift in Sources */,
 				F1442D6F2B39441000266803 /* WinQuizViewController.swift in Sources */,
 				F1442D822B3B267200266803 /* Card3ViewController.swift in Sources */,
 				F1813D812B36BA5D00BD5ACE /* DetailViewController.swift in Sources */,
 				F1442D772B39961B00266803 /* LoseCardViewController.swift in Sources */,
+				F1442D862B3B297800266803 /* SettingsViewController.swift in Sources */,
 				F1442D732B3949F200266803 /* RouletteViewController.swift in Sources */,
 				F1813D872B36C68E00BD5ACE /* QuizViewController.swift in Sources */,
 				F1442D672B36D9C600266803 /* Card1ViewController.swift in Sources */,

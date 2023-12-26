@@ -121,7 +121,9 @@ class CreateViewController: UIViewController {
     }
     
     @objc private func settingsButton() {
-        print("settings")
+        let settingsVC = SettingsViewController()
+        let navigationController = UINavigationController(rootViewController: settingsVC)
+        self.present(navigationController, animated: true)
     }
 }
 
