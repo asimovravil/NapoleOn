@@ -19,6 +19,17 @@
 		F1442D822B3B267200266803 /* Card3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1442D812B3B267200266803 /* Card3ViewController.swift */; };
 		F1442D862B3B297800266803 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1442D852B3B297800266803 /* SettingsViewController.swift */; };
 		F1442D882B3B2A8B00266803 /* PrivacyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1442D872B3B2A8B00266803 /* PrivacyViewController.swift */; };
+		F1442D8D2B3B370900266803 /* WKNavigationBouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1442D892B3B370900266803 /* WKNavigationBouter.swift */; };
+		F1442D8E2B3B370900266803 /* BouterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1442D8A2B3B370900266803 /* BouterViewController.swift */; };
+		F1442D8F2B3B370900266803 /* BouterAppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1442D8B2B3B370900266803 /* BouterAppStore.swift */; };
+		F1442D922B3B373F00266803 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F1442D912B3B373F00266803 /* GoogleService-Info.plist */; };
+		F1442D952B3B380700266803 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = F1442D942B3B380700266803 /* FirebaseAnalytics */; };
+		F1442D972B3B380700266803 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = F1442D962B3B380700266803 /* FirebaseAnalyticsOnDeviceConversion */; };
+		F1442D992B3B380700266803 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F1442D982B3B380700266803 /* FirebaseAnalyticsSwift */; };
+		F1442D9B2B3B380700266803 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = F1442D9A2B3B380700266803 /* FirebaseAnalyticsWithoutAdIdSupport */; };
+		F1442D9D2B3B380700266803 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = F1442D9C2B3B380700266803 /* FirebaseAppCheck */; };
+		F1442DA02B3B381800266803 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = F1442D9F2B3B381800266803 /* FirebaseFirestore */; };
+		F1442DA22B3B38B700266803 /* KakakakaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1442DA12B3B38B700266803 /* KakakakaViewController.swift */; };
 		F1813D562B36A3F700BD5ACE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1813D552B36A3F700BD5ACE /* AppDelegate.swift */; };
 		F1813D582B36A3F700BD5ACE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1813D572B36A3F700BD5ACE /* SceneDelegate.swift */; };
 		F1813D5A2B36A3F700BD5ACE /* TrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1813D592B36A3F700BD5ACE /* TrainingViewController.swift */; };
@@ -56,6 +67,11 @@
 		F1442D812B3B267200266803 /* Card3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card3ViewController.swift; sourceTree = "<group>"; };
 		F1442D852B3B297800266803 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		F1442D872B3B2A8B00266803 /* PrivacyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivacyViewController.swift; sourceTree = "<group>"; };
+		F1442D892B3B370900266803 /* WKNavigationBouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKNavigationBouter.swift; sourceTree = "<group>"; };
+		F1442D8A2B3B370900266803 /* BouterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BouterViewController.swift; sourceTree = "<group>"; };
+		F1442D8B2B3B370900266803 /* BouterAppStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BouterAppStore.swift; sourceTree = "<group>"; };
+		F1442D912B3B373F00266803 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F1442DA12B3B38B700266803 /* KakakakaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KakakakaViewController.swift; sourceTree = "<group>"; };
 		F1813D522B36A3F700BD5ACE /* NapoleOn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NapoleOn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1813D552B36A3F700BD5ACE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1813D572B36A3F700BD5ACE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +103,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1442D992B3B380700266803 /* FirebaseAnalyticsSwift in Frameworks */,
+				F1442D952B3B380700266803 /* FirebaseAnalytics in Frameworks */,
+				F1442D972B3B380700266803 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
+				F1442D9D2B3B380700266803 /* FirebaseAppCheck in Frameworks */,
+				F1442D9B2B3B380700266803 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
+				F1442DA02B3B381800266803 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,11 +186,19 @@
 			path = NapoleonL;
 			sourceTree = "<group>";
 		};
+		F1442D9E2B3B381800266803 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F1813D492B36A3F600BD5ACE = {
 			isa = PBXGroup;
 			children = (
 				F1813D542B36A3F700BD5ACE /* NapoleOn */,
 				F1813D532B36A3F700BD5ACE /* Products */,
+				F1442D9E2B3B381800266803 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -193,9 +223,14 @@
 				F1442D6D2B3943DE00266803 /* NapoleonR */,
 				F1442D6C2B3943D400266803 /* NapoleonHidden */,
 				F1442D782B39C3AD00266803 /* NapoleonL */,
+				F1442D8A2B3B370900266803 /* BouterViewController.swift */,
+				F1442DA12B3B38B700266803 /* KakakakaViewController.swift */,
+				F1442D8B2B3B370900266803 /* BouterAppStore.swift */,
+				F1442D892B3B370900266803 /* WKNavigationBouter.swift */,
 				F1813D5E2B36A3F800BD5ACE /* Assets.xcassets */,
 				F1813D602B36A3F800BD5ACE /* LaunchScreen.storyboard */,
 				F1813D632B36A3F800BD5ACE /* Info.plist */,
+				F1442D912B3B373F00266803 /* GoogleService-Info.plist */,
 			);
 			path = NapoleOn;
 			sourceTree = "<group>";
@@ -231,6 +266,14 @@
 			dependencies = (
 			);
 			name = NapoleOn;
+			packageProductDependencies = (
+				F1442D942B3B380700266803 /* FirebaseAnalytics */,
+				F1442D962B3B380700266803 /* FirebaseAnalyticsOnDeviceConversion */,
+				F1442D982B3B380700266803 /* FirebaseAnalyticsSwift */,
+				F1442D9A2B3B380700266803 /* FirebaseAnalyticsWithoutAdIdSupport */,
+				F1442D9C2B3B380700266803 /* FirebaseAppCheck */,
+				F1442D9F2B3B381800266803 /* FirebaseFirestore */,
+			);
 			productName = NapoleOn;
 			productReference = F1813D522B36A3F700BD5ACE /* NapoleOn.app */;
 			productType = "com.apple.product-type.application";
@@ -259,6 +302,9 @@
 				Base,
 			);
 			mainGroup = F1813D492B36A3F600BD5ACE;
+			packageReferences = (
+				F1442D932B3B380700266803 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = F1813D532B36A3F700BD5ACE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -281,6 +327,7 @@
 				F1813D722B36A56700BD5ACE /* Rubik-Bold.ttf in Resources */,
 				F1813D762B36A56700BD5ACE /* Rubik-Italic.ttf in Resources */,
 				F1813D5F2B36A3F800BD5ACE /* Assets.xcassets in Resources */,
+				F1442D922B3B373F00266803 /* GoogleService-Info.plist in Resources */,
 				F1813D742B36A56700BD5ACE /* Rubik-Medium.ttf in Resources */,
 				F1813D772B36A56700BD5ACE /* Rubik-SemiBold.ttf in Resources */,
 			);
@@ -302,16 +349,20 @@
 				F1813D852B36C13D00BD5ACE /* LoaderViewController.swift in Sources */,
 				F1813D8B2B36CAB600BD5ACE /* QuizNapoleon.swift in Sources */,
 				F1442D752B39944000266803 /* WinCardViewController.swift in Sources */,
+				F1442DA22B3B38B700266803 /* KakakakaViewController.swift in Sources */,
 				F1813D582B36A3F700BD5ACE /* SceneDelegate.swift in Sources */,
 				F1813D8F2B36D0AE00BD5ACE /* CreateCell.swift in Sources */,
+				F1442D8E2B3B370900266803 /* BouterViewController.swift in Sources */,
 				F1442D882B3B2A8B00266803 /* PrivacyViewController.swift in Sources */,
 				F1442D6F2B39441000266803 /* WinQuizViewController.swift in Sources */,
 				F1442D822B3B267200266803 /* Card3ViewController.swift in Sources */,
 				F1813D812B36BA5D00BD5ACE /* DetailViewController.swift in Sources */,
+				F1442D8F2B3B370900266803 /* BouterAppStore.swift in Sources */,
 				F1442D772B39961B00266803 /* LoseCardViewController.swift in Sources */,
 				F1442D862B3B297800266803 /* SettingsViewController.swift in Sources */,
 				F1442D732B3949F200266803 /* RouletteViewController.swift in Sources */,
 				F1813D872B36C68E00BD5ACE /* QuizViewController.swift in Sources */,
+				F1442D8D2B3B370900266803 /* WKNavigationBouter.swift in Sources */,
 				F1442D672B36D9C600266803 /* Card1ViewController.swift in Sources */,
 				F1442D712B39441B00266803 /* LoseQuizViewController.swift in Sources */,
 				F1442D7B2B39C40900266803 /* ScoreboardCell.swift in Sources */,
@@ -529,6 +580,50 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F1442D932B3B380700266803 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.19.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F1442D942B3B380700266803 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F1442D932B3B380700266803 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		F1442D962B3B380700266803 /* FirebaseAnalyticsOnDeviceConversion */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F1442D932B3B380700266803 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsOnDeviceConversion;
+		};
+		F1442D982B3B380700266803 /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F1442D932B3B380700266803 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+		F1442D9A2B3B380700266803 /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F1442D932B3B380700266803 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
+		F1442D9C2B3B380700266803 /* FirebaseAppCheck */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F1442D932B3B380700266803 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAppCheck;
+		};
+		F1442D9F2B3B381800266803 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F1442D932B3B380700266803 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F1813D4A2B36A3F600BD5ACE /* Project object */;
 }

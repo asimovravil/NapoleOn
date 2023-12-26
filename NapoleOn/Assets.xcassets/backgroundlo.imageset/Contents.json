@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "backgroundlo.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
