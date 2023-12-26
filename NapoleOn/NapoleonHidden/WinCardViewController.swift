@@ -123,11 +123,13 @@ class WinCardViewController: UIViewController {
         if currentTeamIndex < teamNames.count - 1 {
             currentTeamIndex += 1
             navigateToGameController()
+            print("Going to next team, currentTeamIndex: \(currentTeamIndex)")
         } else {
             let scoreboardVC = ScoreboardViewController()
             scoreboardVC.teamNames = teamNames
             scoreboardVC.correctAnswersCount = correctAnswersCount
             scoreboardVC.timer = timer
+            print("Going to ScoreboardViewController with teamNames: \(teamNames), correctAnswersCount: \(correctAnswersCount), timer: \(timer)")
             navigationController?.pushViewController(scoreboardVC, animated: true)
         }
     }
@@ -138,15 +140,21 @@ class WinCardViewController: UIViewController {
         switch cardNumber {
         case 1:
             let card1VC = Card1ViewController()
-            card1VC.currentTeamIndex = currentTeamIndex
+            card1VC.teamNames = self.teamNames
+            card1VC.correctAnswersCount = self.correctAnswersCount
+            card1VC.currentTeamIndex = self.currentTeamIndex
             navigationController?.pushViewController(card1VC, animated: true)
         case 2:
             let card2VC = Card2ViewController()
-            card2VC.currentTeamIndex = currentTeamIndex
+            card2VC.teamNames = self.teamNames
+            card2VC.correctAnswersCount = self.correctAnswersCount
+            card2VC.currentTeamIndex = self.currentTeamIndex
             navigationController?.pushViewController(card2VC, animated: true)
         case 3:
             let card3VC = Card3ViewController()
-            card3VC.currentTeamIndex = currentTeamIndex
+            card3VC.teamNames = self.teamNames
+            card3VC.correctAnswersCount = self.correctAnswersCount
+            card3VC.currentTeamIndex = self.currentTeamIndex
             navigationController?.pushViewController(card3VC, animated: true)
         default:
             print("Invalid card number")

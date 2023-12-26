@@ -185,7 +185,7 @@ class RouletteViewController: UIViewController {
             print("No card selected")
             return
         }
-
+        print("Selected Card Number: \(selectedCardNumber)")
         switch selectedCardNumber {
         case 1:
             let card1VC = Card1ViewController()

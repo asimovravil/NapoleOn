@@ -262,6 +262,7 @@ class Card2ViewController: UIViewController {
         loseVC.correctAnswersCount = self.correctAnswersCount
         loseVC.currentTeamIndex = self.currentTeamIndex
         loseVC.selectedCardNumber = self.selectedCardNumber
+        print("Navigating to LoseCardViewController with teamNames: \(teamNames), correctAnswersCount: \(correctAnswersCount), timer: \(timeRemaining)")
         loseVC.navigationItem.hidesBackButton = true
         navigationController?.pushViewController(loseVC, animated: true)
     }
@@ -439,6 +440,7 @@ class Card2ViewController: UIViewController {
         winVC.correctAnswersCount = self.correctAnswersCount
         winVC.currentTeamIndex = self.currentTeamIndex
         winVC.selectedCardNumber = self.selectedCardNumber
+        print("Navigating to WinCardViewController with teamNames: \(teamNames), correctAnswersCount: \(correctAnswersCount), timer: \(timeRemaining)")
         navigationController?.pushViewController(winVC, animated: true)
     }
 }

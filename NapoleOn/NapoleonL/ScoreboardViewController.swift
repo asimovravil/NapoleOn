@@ -26,6 +26,7 @@ class ScoreboardViewController: UIViewController {
         valueConstraints()
         tableView.reloadData()
         
+        print("ScoreboardViewController loaded with teamNames: \(teamNames), correctAnswersCount: \(correctAnswersCount), timer: \(timer)")
         print("Team Names: \(teamNames)")
         print("Correct Answers Count: \(correctAnswersCount)")
         print("Timer: \(timer)")
