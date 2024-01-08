@@ -23,6 +23,13 @@ class CreateViewController: UIViewController {
         view.backgroundColor = UIColor(named: "backgroundCustom")
         valueNavigationBar()
         setupUI()
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc private func dismissKeyboard() {
+        view.endEditing(true)
     }
     
     override func viewDidLayoutSubviews() {
